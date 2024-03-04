@@ -19,8 +19,8 @@ export default function Home() {
 
   return(
     <>
-      {tileArray.map(function(object, i){
-        return <Tile key={"key" + (i+1)} isCustomColor={object} tileNumber={(i+1)} handleTileClicked={() => handleTileClicked(i)}/>;
+      {tileArray.map(function(isCustomColor, i){
+        return <Tile key={"key" + (i+1)} isCustomColor={isCustomColor} tileNumber={(i+1)} handleTileClicked={() => handleTileClicked(i)}/>;
       })}
       {/* <p>Test</p> */}
       {/* <Tile key={"key" + (0+1)} isCustomColor={tileArray[0]} tileNumber={(0+1)} handleTileClicked={() => handleTileClicked(0)}/>; */}
