@@ -9,7 +9,7 @@ export default function Home() {
   //   tileArray.push(false);
   // }
 
-  const [tileArray, setTileArray] = useState(Array(100).fill(false));
+  const [tileArray, setTileArray] = useState(Array(1000).fill(false));
 
   function handleTileClicked(tileIndex){
     const nextTileArray = tileArray.slice();
@@ -20,7 +20,11 @@ export default function Home() {
   return(
     <>
       {tileArray.map(function(isCustomColor, i){
-        return <Tile key={"key" + (i+1)} isCustomColor={isCustomColor} tileNumber={(i+1)} handleTileClicked={() => handleTileClicked(i)}/>;
+        return (
+          <>
+          <Tile key={"key" + (i+1)} isCustomColor={isCustomColor} tileNumber={(i+1)} handleTileClicked={() => handleTileClicked(i)}/>
+          </>
+        );
       })}
       {/* <p>Test</p> */}
       {/* <Tile key={"key" + (0+1)} isCustomColor={tileArray[0]} tileNumber={(0+1)} handleTileClicked={() => handleTileClicked(0)}/>; */}
@@ -121,8 +125,6 @@ export default function Home() {
 
 export function Tile({isCustomColor, tileNumber,handleTileClicked}){
   return(
-    <div onClick={handleTileClicked} className={isCustomColor ? styles.redTile : styles.blueTile}>
-      <p>Tile {tileNumber}</p>
-    </div>
+      <p style={{ display: 'inline-block', "width":"5%", "margin":"0px"}} onClick={handleTileClicked} className={isCustomColor ? styles.redTile : styles.blueTile}>POP!</p>
   );
 }

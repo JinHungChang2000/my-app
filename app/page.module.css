@@ -1,9 +1,16 @@
+/* .redTile, .blueTile {
+  display: "inline"; 
+} */
+
 .redTile {
-  background-color: red;
+  background-color: black;
+  color: white;
 }
 
 .blueTile {
-  background-color: blue;
+  background-color: white;
+  color:white;
+  user-select: none;
 }
 
 .main {
