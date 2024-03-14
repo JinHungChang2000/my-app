@@ -21,9 +21,7 @@ export default function Home() {
     <>
       {tileArray.map(function(isCustomColor, i){
         return (
-          <>
           <Tile key={"key" + (i+1)} isCustomColor={isCustomColor} tileNumber={(i+1)} handleTileClicked={() => handleTileClicked(i)}/>
-          </>
         );
       })}
       {/* <p>Test</p> */}
